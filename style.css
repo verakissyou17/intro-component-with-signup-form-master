@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --Red: hsl(0, 100%, 74%);
+  --Green: hsl(154, 59%, 51%);
+  --Blue: hsl(248, 32%, 49%);
+  --White: hsl(0, 0%, 100%);
+  --Dark-Blue: hsl(249, 10%, 26%); 
+  --Grayish-Blue: hsl(246, 25%, 77%);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  background-color: var(--Red);
+  background-image: url('./images/bg-intro-mobile.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  margin: 1em auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+  margin: 0 auto;
+  color: var(--White);
+  text-align: center;
+  padding-inline: .7rem;
+  padding-block: 5rem 4rem;
+}
+
+.title {
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.subtitle {
+  text-align: center;
+  opacity: .75;
+}
+
+.main {
+  padding-inline: .5rem;
+  width: 100%;
+}
+
+.blue-section {
+  background-color: var(--Blue);
+  color: var(--White);
+  padding: 1rem;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 0 hsla(249, 10%, 26%, 0.3);
+}
+
+.blue-section p {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.blue-section p .bold-text {
+  font-weight: 700;
+}
+
+.blue-section p .thin-text {
+  font-weight: 400;
+  opacity: .85;
+}
+
+form {
+  width: 100%;
+  border-radius: 10px;
+  background-color: var(--White);
+  padding: 1rem;
+  box-shadow: 0 8px 0 hsla(249, 10%, 26%, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-control {
+  width: 100%;
+  position: relative;
+}
+
+form input {
+  outline: none;
+  padding: 1.2rem;
+  margin: .5rem auto;
+  width: 100%;
+  border: 1px solid  hsla(246, 25%, 77%, 0.8);
+  border-radius: 5px;
+}
+
+form input:focus {
+  border: 3px solid  var(--Dark-Blue);
+}
+
+form input::placeholder {
+  color: var(--Dark-Blue);
+  opacity: .75;
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.error-icon {
+  display: none;
+  position: absolute;
+  left: 85%;
+  bottom: 50%;
+}
+
+.form-control.error input {
+  border: 3px solid  var(--Red);
+}
+
+.form-control.error .error-icon {
+  display: block;
+}
+
+.form-control.error small {
+  display: block;
+}
+
+.email-error {
+  color: var(--Red);
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  opacity: .85;
+}
+
+ .example-control {
+  color: var(--Red);
+  opacity:.75;
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+ }
+
+.form-control small {
+  display: none;
+  text-align: right;
+  color: var(--Red);
+  font-size: small;
+}
+
+.submit-btn {
+  cursor: pointer;
+  padding: 1.5rem 1rem;
+  margin: .5rem auto;
+  width: 100%;
+  border: inset 5px solid var(--Green);
+  outline: none;
+  border-radius: 5px;
+  background-color: var(--Green);
+  color: hsla(0, 0%, 100%, 0.9);
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+form .terms {
+  text-align: center;
+  font-size: smaller;
+  width: 100%;
+  color: var(--Grayish-Blue);
+  line-height: 1.5;
+}
+
+form .terms span {
+  color: var(--Red);
+  font-weight: 600;
+}
+
+.attribution { 
+  margin-block: 2rem;
+  font-size: 11px; 
+  text-align: center;
+}
+
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (min-width: 768px) {
+  body {
+    background-image: url('./images/bg-intro-desktop.png');
+    padding-top: 4rem;
+  }
+
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1100px;
+    height: auto;
+    gap: 2rem;
+  }
+
+  .header {
+    width: 100%;
+    text-align: left;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .subtitle {
+    text-align: left;
+  }
+  .main {
+    width: 100%;
+  }
+}
