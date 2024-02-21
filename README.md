@@ -18,8 +18,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution URL](https://your-solution-url.com)
-- Live Site URL: [Site URL](https://your-live-site-url.com)
+- Solution URL: [Solution URL](https://www.frontendmentor.io/solutions/intro-component-with-sign-up-form-solution-with-flex-TpCIuqfrCi)
+- Live Site URL: [Site URL](https://verakissyou17.github.io/intro-component-with-signup-form-master/)
 
 ## My process
 
